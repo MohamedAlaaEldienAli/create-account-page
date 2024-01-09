@@ -1,0 +1,504 @@
+
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
+  /* --main-padding-top: 50px;
+  --main-padding-bottom: 100px; */
+  --section-background: #ececec;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+/* start header section  */
+.header{
+  background-color: transparent;
+  position: relative;
+  box-shadow: 0 0 10px #ddd;
+}
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.header .logo{
+  color: var(--main-color);
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  height: 73px;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px){
+  .header .logo{
+    width: 100%;
+    height: 50px;
+  }
+}
+.header .main-nav{
+  display: flex;
+}
+@media (max-width: 767px){
+  .header .main-nav{
+    margin: auto;
+  }
+}
+.header .main-nav > li > a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  padding: 0 30px;
+  transition: var(--main-transition);
+  overflow: hidden;
+  text-transform: uppercase;
+}
+@media (max-width: 767px){
+  .header .main-nav > li > a{
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+    
+  }
+  .header .main-nav > li > a::before{
+    height: 2px;
+  }
+}
+.header .main-nav > li > a::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  top: 0;
+  left: -100%;
+  transition: all var(--main-transition);
+}
+@media (max-width: 767px){
+  
+  .header .main-nav > li > a::before{
+    height: 2px;
+  }
+}
+.header .main-nav > li > a:hover{
+  color: var(--main-color);
+  background-color: #fafafa;
+  
+}
+.header .main-nav > li > a:hover::before{
+  left: 0;
+}
+.header .btn{
+  padding: 8px 15px;
+  border-color: transparent;
+  background-color: #2195f362;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: all var(--main-transition);
+}
+@media (max-width: 767px){
+  
+  .header .btn{
+    padding: 5px 5px;
+    border-color: transparent;
+    background-color: #2195f362;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+  }
+}
+.header .btn:hover{
+  background-color: var(--main-color);
+}
+
+hr{
+  margin: 20px 25px;
+ 
+  border: 1px solid #ddd;
+  outline: none;
+}
+/* end header section  */
+body{
+  font-family: "Cairo", sans-serif;
+    min-height: 100vh;
+    background-image: url(../images/halloween-4582988_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/* start main section  */
+.main .container{
+  position: relative;
+   max-width: 800px;
+   margin-top: 60px; 
+  background-color: transparent;
+  padding: 20px 15px;
+  
+}
+.main .container .content{
+  border-radius: 20px;
+  padding:50px 15px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255 , 255 , 255 , 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  
+  
+  
+}
+.main .container .content h2 {
+  margin: 10px;
+  font-size: 40px;
+
+}
+
+.main .container .content p {
+  margin: 10px;
+  font-size: 18px;
+  
+  
+
+}
+
+.main .container .content  .firstSpan::before{
+  content: "$";
+  font-size: 13px;
+  position: relative;
+  top: -17px;
+  margin-right: -1px;
+  font-weight: normal;
+
+
+}
+.main .container .content .firstSpan::after{
+  content: "/Mo";
+    font-size: 12px;
+    position: relative;
+    right: -2px;
+    bottom: -2px;
+}
+
+.main .content .formBox 
+{
+ margin: 50px 0;
+ 
+}
+
+.main .content .formBox >label:first-child 
+{
+ font-size: 19px;
+ position: relative;
+ top: -20px;
+ 
+ 
+}
+.main .container .inputBoxUp{
+
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ 
+ 
+ 
+}
+@media (max-width: 768px) {
+  .main .container .inputBoxUp {
+    display: block;
+    
+  }
+  
+}
+.main .container .inputBoxUp input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px 0;
+    color:white;
+}
+
+.main .container .inputBoxUp input:last-child{
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  
+  .main .container .inputBoxUp input:last-child{
+    margin-left: 0px;
+  }
+}
+.main .container .inputBoxCen input{
+  width: 100%;
+    height: 50px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px 0;
+    color:white;
+    position: relative;
+  
+}
+
+
+
+
+.main .content .formBox  h3
+{
+
+ 
+ font-size: 18px;
+ margin-bottom: 20px;
+ 
+ 
+}
+.main .container .inputBoxDown input{
+  width: 100%;
+    height: 50px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px 0;
+    color:white;
+  
+}
+
+.main .container .inputBoxDown .cardBox{
+  display: flex;
+ justify-content: space-around;
+ max-width: 250px;
+ margin: 2% 0;
+  
+}
+@media (max-width: 768px) {
+  
+  .main .container .inputBoxDown .cardBox{
+    
+   justify-content: space-evenly;
+   max-width: 100%;
+  
+    
+  }
+}
+.main .container .inputBoxDown .cardBox i{
+  font-size: 40px;
+  transition: all var(--main-transition);
+}
+.main .container .inputBoxDown .cardBox i:hover{
+  transform: scale(1.5);
+}
+.main .container .date {
+  margin: 30px 0;
+}
+.main .container .date label{
+  font-size: 18px;
+  position: relative;
+  top: -10px;
+}
+.main .container .bll-Zip{
+  margin: 30px 0;
+}
+.main .container .bll-Zip label{
+  font-size: 18px;
+}
+.main .container .bll-Zip p{
+  font-size: 15px;
+}
+
+.main .content .boxCreate{
+  text-align: center;
+  line-height: 1.5;
+}
+.main .content .boxCreate p{
+  font-size: 18px;
+}
+.main .content .boxCreate span{
+  color: rgb(95, 95, 95);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main .content .btn-create{
+  display: flex;
+  width: 100%;
+  width: fit-content;
+  margin: 20px auto -30px;
+  padding: 12px 25px;
+  border-color: transparent;
+  background-color: #2195f362;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
+  transition: all var(--main-transition);
+}
+.main .content .btn-create:hover{
+  background-color: var(--main-color);
+}
+
+.main .contentInfo{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  gap: 20px;
+  margin:40px 0;
+  text-align: center;
+}
+
+
+.main .container .infobox1{
+  
+  width: 100%;
+  height: 250px;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px 0px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.main .container .infobox1 p{
+  font-size: 18px;
+}
+
+.main .container .infobox1 .incon {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  font-size: 30px;
+
+}
+
+.main .container .infobox1 .icons ul li:hover{
+ color: #1787e0;
+ transition: all var(--main-transition);
+ transform: scale(1.2);
+
+}
+.main .container .infobox2{
+  width: 100%;
+  height: 250px;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px 20px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .main .container .infobox2 {
+    font-size: 14px;
+    
+  }
+}
+.main .container .infobox2 h3{
+  margin: 10px 0;
+  
+}
+.main .container .infobox2 p{
+  line-height: 1.4;
+  
+}
+.main .container .infobox3{
+  width: 100%;
+  height: 250px;
+  display: block;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px 20px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .main .contentInfo{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main .container .infobox3{
+    grid-column: 1 / 3;
+  }
+}
+
+.main .container .infobox3 h3{
+  margin: 10px 0;
+}
+.main .container .infobox p{
+  line-height: 1.4;
+}
+/* end main section  */
+
+
+
